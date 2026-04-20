@@ -49,9 +49,9 @@ function CustomerList({ onSelectCustomer, debts }) {
           className="flex-1 border border-gray-300 rounded-xl px-4 py-3 text-right text-lg focus:outline-none focus:border-green-500"
         />
         <button
-          onClick={addCustomer}
-          className="bg-green-600 text-white px-4 py-3 rounded-xl text-lg font-bold"
-        >
+         onClick={addCustomer}
+       className="bg-green-600 text-white px-5 py-3 rounded-xl text-lg font-bold active:scale-95 transition"
+>
           + إضافة
         </button>
       </div>
@@ -73,17 +73,17 @@ function CustomerList({ onSelectCustomer, debts }) {
             </div>
             <div className="flex gap-2">
               <button
-                onClick={() => onSelectCustomer(customer)}
-                className="bg-green-600 text-white px-4 py-2 rounded-xl"
-              >
-                فتح
-              </button>
-              <button
-                onClick={() => deleteCustomer(customer.id)}
-                className="bg-red-500 text-white px-4 py-2 rounded-xl"
-              >
-                حذف
-              </button>
+  onClick={() => onSelectCustomer(customer)}
+  className="bg-green-600 text-white px-5 py-3 rounded-xl text-base font-bold active:scale-95 transition"
+>
+  فتح
+</button>
+<button
+  onClick={() => deleteCustomer(customer.id)}
+  className="bg-red-500 text-white px-5 py-3 rounded-xl text-base font-bold active:scale-95 transition"
+>
+  حذف
+</button>
             </div>
           </div>
         ))

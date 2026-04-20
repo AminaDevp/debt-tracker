@@ -44,18 +44,17 @@ if (showPaid) return (
       {/* Header */}
       <div className="flex items-center justify-between my-4">
         <button
-          onClick={onBack}
-          className="bg-gray-200 px-4 py-2 rounded-xl text-gray-700"
-        >
-          ← رجوع
-        </button>
+        onClick={onBack}
+       className="bg-gray-200 px-5 py-3 rounded-xl text-gray-700 text-base font-bold active:scale-95 transition"
+      >
+       ← رجوع
+    </button>
         <h2 className="text-xl font-bold text-gray-800">{customer.name}</h2>
         <button
-          onClick={() => setShowPaid(true)}
-          className="bg-blue-500 text-white px-4 py-2 rounded-xl"
-        >
-          📋 المدفوعات
-        </button>
+         onClick={() => setShowPaid(true)}
+         className="bg-blue-500 text-white px-5 py-3 rounded-xl text-base font-bold active:scale-95 transition">
+  📋 المدفوعات
+   </button>
       </div>
 
       {/* إضافة دين */}
@@ -100,11 +99,11 @@ if (showPaid) return (
               {debt.note && <p className="text-gray-600">{debt.note}</p>}
             </div>
             <button
-              onClick={() => payDebt(debt.id)}
-              className="bg-green-600 text-white px-4 py-2 rounded-xl"
-            >
-              ✅ تسديد
-            </button>
+            onClick={() => payDebt(debt.id)}
+           className="bg-green-600 text-white px-5 py-3 rounded-xl text-base font-bold active:scale-95 transition min-w-[80px]"
+               >
+         ✅ تسديد
+       </button>
           </div>
         ))
       )}

@@ -24,7 +24,7 @@ function App() {
         📒 دفتر الذمم
            </header>
 
-<div className="max-w-md mx-auto p-4">
+<div className="w-full max-w-lg mx-auto p-4">
         {selectedCustomer === null ? (
         <CustomerList onSelectCustomer={setSelectedCustomer}    debts={debts} />
       ) : (

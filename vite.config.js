@@ -11,26 +11,13 @@ export default defineConfig({
       registerType: 'autoUpdate',
       manifest: {
         name: 'دفتر الذمم',
-        short_name: 'دفتري',
+        short_name: 'دفترى',
         description: 'تطبيق لتتبع ديون العملاء',
         theme_color: '#16a34a',
         background_color: '#ffffff',
         display: 'standalone',
-        start_url: '/',
-        lang: 'ar',
-        icons: [
-          {
-            src: '/icon-192.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: '/icon-512.png',
-            sizes: '512x512',
-            type: 'image/png'
-          }
-        ]
+        start_url: '/'
       }
     })
-  ],
+  ]
 })

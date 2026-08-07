@@ -1,9 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
-function CustomerList({ onSelectCustomer, debts }) { 
+function  CustomerList({ onSelectCustomer, debts }){ 
   const [customers, setCustomers] = useState([])
   const [newName, setNewName] = useState("")
   const inputRef = useRef(null);
-
   useEffect(() => {
     inputRef.current.focus();
   }, []);
@@ -11,8 +10,6 @@ function CustomerList({ onSelectCustomer, debts }) {
  useEffect(() => {
   const savedCustomers = localStorage.getItem("customers")
   if (savedCustomers) setCustomers(JSON.parse(savedCustomers))},[])
-
-
   // حفظ العملاء في localStorage عند كل تغيير
   useEffect(() => {
     localStorage.setItem("customers", JSON.stringify(customers))
@@ -33,8 +30,6 @@ function CustomerList({ onSelectCustomer, debts }) {
  function getTotalDebt(customerId) {
   return debts.filter(d => d.customerId === customerId && !d.isPaid).reduce((sum, d) => sum + d.amount, 0)
 }
-
- 
   return (
     <div>
       {/* إضافة عميل */}
